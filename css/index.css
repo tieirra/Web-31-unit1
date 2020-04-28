@@ -8,6 +8,12 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.button {
+  background-color: #FF9A00;
+  width: 35%;
+  height: 20%;
+  color: blanchedalmond;
+}
 html,
 body,
 div,
@@ -121,6 +127,19 @@ nav a {
   background-color: #FF9A00;
   width: 20%;
   padding: 20px;
+}
+.Steps .box .button {
+  background-color: #FF9A00;
+  width: 35%;
+  height: 20%;
+  color: blanchedalmond;
+}
+@media (max-width: 500px) {
+  nav a {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF9A00;
+  }
 }
 footer {
   width: 100%;

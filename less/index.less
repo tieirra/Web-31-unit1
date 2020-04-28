@@ -4,6 +4,9 @@
 @mainColor: #FF9A00;
 @mainFont:  'Oswald', sans-serif;
 @boxFontSize:  2px;
+@mediaPhone: {max-width: 500px};  
+@mediaTablet: {max-width: 800px};
+@mediaDesktop: {max-width: 1000px};
 // Variables end//
 
 // mixins 
@@ -17,7 +20,12 @@ h3{
   display: flex;
   flex-direction: column;
 }
-
+.button{
+  background-color: @mainColor;
+  width: 35%;
+  height: 20%;
+  color: blanchedalmond;
+  }
 // mixins ends//
 
 //Reset
@@ -71,10 +79,38 @@ nav a {
     background-color: @mainColor;
     width: 20%;
     padding: 20px;
-    
+    .button{
+      background-color: @mainColor;
+      width: 35%;
+      height: 20%;
+      color: blanchedalmond;
+      }
  }
   
 }
+
+@media(max-width: 500px){
+ nav a{
+display:flex;
+flex-direction: column;
+background-color: @mainColor;
+}
+.Steps{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+.box{
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  background-color: @mainColor;
+  width: 20%;
+  padding: 20px;
+
+}
+
 
 // footer
 footer{
