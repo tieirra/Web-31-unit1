@@ -1,3 +1,26 @@
+// Variables 
+@width: 20px;
+@height: 15px;
+@mainColor: #FF9A00;
+@mainFont:  'Oswald', sans-serif;
+@boxFontSize:  2px;
+// Variables end//
+
+// mixins 
+.steps{
+  display: flex;
+  flex-direction: row;
+}
+h3{
+  font-size: 2px; 
+  color: #FF165D;
+  display: flex;
+  flex-direction: column;
+}
+
+// mixins ends//
+
+//Reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,14 +41,42 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+// reset ends//
 
+//navigation
 nav a {
-    background-color: rgb(17, 16, 16);
-    width: 100%;
+  background-color: rgb(17, 16, 16);
+  width: 100%;
+  text-decoration: none;
 }
+//nav ends//
 .top-content{
-    margin-top: 20%;
+    margin-top: 10%;
+    width: 75%;
     background-color: rgb(128, 194, 53);
     border: 7px;
 
+}
+.Steps{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .box{
+    color: #FF165D;
+    display: flex;
+    flex-direction: column;
+    background-color: @mainColor;
+    width: 20%;
+    padding: 20px;
+    
+ }
+  
+}
+
+// footer
+footer{
+  width: 100%;
 }
