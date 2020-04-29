@@ -1,12 +1,12 @@
 // Variables 
-@width: 20px;
-@height: 15px;
+@width: 100%;
 @mainColor: #FF9A00;
+@Color2: #ff165d;
 @mainFont:  'Oswald', sans-serif;
 @boxFontSize:  2px;
-@mediaPhone: {max-width: 500px};  
-@mediaTablet: {max-width: 800px};
-@mediaDesktop: {max-width: 1000px};
+@media(max-width: 500px){}; 
+@media(max-width: 800px){};
+@media(max-width: 1000px){};
 // Variables end//
 
 // mixins 
@@ -51,68 +51,126 @@ time, mark, audio, video {
 }
 // reset ends//
 
+
 //navigation
-nav a {
-  background-color: rgb(17, 16, 16);
-  width: 100%;
+ header {
+  background-color: @mainColor;
+  width: @width;
+  padding: 20px;
   text-decoration: none;
+}
+ul{
+  width:70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+  li a{
+    text-decoration: none;
+    color: #F6f7d7;
+  }
 }
 //nav ends//
 .top-content{
     margin-top: 10%;
     width: 75%;
-    background-color: rgb(128, 194, 53);
-    border: 7px;
-
+    display: flex;
+    flex-direction: column;
 }
+.top-content h1{
+  margin-left: 30%;
+  font-size: 35px;
+  margin-bottom: 20%;
+  font: @mainFont;
+  color: @Color2;
+}
+.top-content h2{
+    font-size: 35px;
+    color: @Color2;
+  }
+
+  
+
 .Steps{
   margin-top: 10%;
   margin-bottom: 10%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-items: space-between;
+
+  
 
   .box{
-    color: #FF165D;
+    color: #F6f7d7;
     display: flex;
     flex-direction: column;
     background-color: @mainColor;
-    width: 20%;
-    padding: 20px;
-    .button{
-      background-color: @mainColor;
-      width: 35%;
-      height: 20%;
-      color: blanchedalmond;
-      }
+    font-size: 17px;
+    padding: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+
  }
   
 }
-
-@media(max-width: 500px){
- nav a{
-display:flex;
-flex-direction: column;
-background-color: @mainColor;
+.middle-content{
+ font: @mainFont;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ font-size: 24px;
+ width: @width;
+ margin-right: 10%;
 }
-.Steps{
-  margin-top: 10%;
-  margin-bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-.box{
+button{
+  background-color: @Color2;
+  width: 50%;
+  margin: 9%;
   color: blanchedalmond;
-  display: flex;
-  flex-direction: column;
-  background-color: @mainColor;
-  width: 20%;
-  padding: 20px;
+  }
+  footer{
+    background-color: @Color2;
+    width: @width;
+  
+  }
+   footer li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    color:#F6f7d7;
+   }
+   footer a{
+     align-content: center;
+     width: @width;
+   }
+  
+@media(max-width: 500px){
+.box{
+  background-color: blue;
+}
+nav a {
+  background-color: purple;
+   
+ }
+}
+//meadida for 500px ends//
 
+@media(max-width: 1000px){
+  header nav a {
+    background-color: @mainColor
+  }
+  .top-content{
+    display: flex;
+  flex-direction: center;
+
+  }
+}
+// media for 1000px ends//
+@media(max-width: 800px){
+  .button{
+    background-color: blue;
+  }
 }
 
-
-// footer
-footer{
-  width: 100%;
-}
+// media for 800px ends//
