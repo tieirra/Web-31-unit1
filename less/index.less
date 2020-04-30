@@ -1,5 +1,6 @@
 // Variables 
 @width: 100%;
+@mrginbottom: 20px;
 @mainColor: #FF9A00;
 @Color2: #ff165d;
 @mainFont:  'Oswald', sans-serif;
@@ -89,10 +90,9 @@ ul{
     font-size: 35px;
     color: @Color2;
   }
- .cashpic {
-  display: flex;
-  flex-direction: center;
-  background-color: @Color2;
+  
+ .cashpic img{
+  margin-left: 45%;
 }
   
 
@@ -105,7 +105,7 @@ ul{
   width: @width;
 
   .box{
-    color: #F6f7d7;
+    color: black;
     display: flex;
     flex-direction: column;
     background-color: @mainColor;
@@ -226,6 +226,7 @@ button{
 }
 
 // media for 800px ends//
+
 // About Us page//
 h4{
   font-size: 32px;
@@ -235,6 +236,8 @@ h5{
   font-size: 25px;
   color: @mainColor;
 }
-.members{
-  margin-bottom: 40px;
+.web{
+  margin-bottom: @mrgin-bottom;
 }
+
+// contact page//
