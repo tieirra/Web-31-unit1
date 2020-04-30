@@ -3,7 +3,7 @@
 @mainColor: #FF9A00;
 @Color2: #ff165d;
 @mainFont:  'Oswald', sans-serif;
-@boxFontSize:  2px;
+@boxFontSize:  5px;
 @media(max-width: 500px){}; 
 @media(max-width: 800px){};
 @media(max-width: 1000px){};
@@ -79,16 +79,21 @@ ul{
 }
 .top-content h1{
   margin-left: 30%;
+  margin-top: 9px;
   font-size: 35px;
   margin-bottom: 20%;
   font: @mainFont;
   color: @Color2;
 }
-.top-content h2{
+ h2{
     font-size: 35px;
     color: @Color2;
   }
-
+ .cashpic {
+  display: flex;
+  flex-direction: center;
+  background-color: @Color2;
+}
   
 
 .Steps{
@@ -97,8 +102,7 @@ ul{
   display: flex;
   flex-direction: row;
   justify-items: space-between;
-
-  
+  width: @width;
 
   .box{
     color: #F6f7d7;
@@ -106,13 +110,13 @@ ul{
     flex-direction: column;
     background-color: @mainColor;
     font-size: 17px;
-    padding: 50px;
+    padding: 60px;
     margin-left: 5%;
     margin-right: 5%;
-
- }
-  
+    width: @width;
+ } 
 }
+
 .middle-content{
  font: @mainFont;
  display: flex;
@@ -122,17 +126,31 @@ ul{
  width: 65%;
  margin-left: 20%;
 }
+ button{
+ padding: 5%;
+ display: flex;
+ flex-direction: center;
+ justify-content: center;
+ margin-left: 25%;
+ font-size: 1.6rem;
+ text-decoration: none;
+}
+
 button{
   background-color: @Color2;
   width: 50%;
-  margin: 9%;
-  color: blanchedalmond;
+  color: #F6f7d7;
+  border-color: @mainColor;
+  border-radius: 25px;
+  margin-bottom: 9px;
+  margin-top: 9px;
   }
+
   footer{
     background-color: @Color2;
     width: @width;
-  
   }
+
    footer li {
     display: flex;
     flex-direction: row;
@@ -147,25 +165,40 @@ button{
   // @media begins//
 
 @media (min-width: 500px) {
-   .Steps , .box{
+
+  header{
+    background-color: #F6f7d7;
+  }
+
+   header li a{
+    color: @Color2;
+  }
+
+
+  .box {  
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: @mainColor;
-    
+    background-color: @mainColor; 
   }
-  .middle-content{
-  background-color: purple; 
- }
+
+  .threeSteps, h2{
+    color: @mainColor;
+  }
+  .middle-content h2{
+    font-size: 1.4rem;
+  }
   .arrow{
    display: none;
  }
 }
 //meadida for 500px ends//
 
-@media(max-width: 1000px){
+@media(min-width: 1000px){
   header{
-    background-color: @Color2
+    background-color: @Color2;
+    li a{
+    color: #F6f7d7;
+    }
   }
   .Steps .box{
     background-color: black;
@@ -179,10 +212,29 @@ button{
   }
 }
 // media for 1000px ends//
-@media(max-width: 800px){
-  .button{
-    background-color: blue;
+
+// media 800px Begins//
+@media(min-width: 800px){
+  .box{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body{
+    align-items: column;
   }
 }
 
 // media for 800px ends//
+// About Us page//
+h4{
+  font-size: 32px;
+  color: @mainColor;
+}
+h5{
+  font-size: 25px;
+  color: @mainColor;
+}
+.members{
+  margin-bottom: 40px;
+}
