@@ -116,11 +116,11 @@ ul{
 .middle-content{
  font: @mainFont;
  display: flex;
- flex-direction: column;
- justify-content: center;
+ word-wrap:column;
+ text-align: center;
  font-size: 24px;
- width: @width;
- margin-right: 10%;
+ width: 65%;
+ margin-left: 20%;
 }
 button{
   background-color: @Color2;
@@ -144,21 +144,33 @@ button{
      align-content: center;
      width: @width;
    }
-  
-@media(max-width: 500px){
-.box{
-  background-color: blue;
-}
-nav a {
-  background-color: purple;
-   
+  // @media begins//
+
+@media (min-width: 500px) {
+   .Steps , .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: @mainColor;
+    
+  }
+  .middle-content{
+  background-color: purple; 
+ }
+  .arrow{
+   display: none;
  }
 }
 //meadida for 500px ends//
 
 @media(max-width: 1000px){
-  header nav a {
-    background-color: @mainColor
+  header{
+    background-color: @Color2
+  }
+  .Steps .box{
+    background-color: black;
+    display: Flex;
+    justify-content: center;
   }
   .top-content{
     display: flex;

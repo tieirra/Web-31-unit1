@@ -155,11 +155,11 @@ ul li a {
 .middle-content {
   font: 'Oswald', sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  word-wrap: column;
+  text-align: center;
   font-size: 24px;
-  width: 100%;
-  margin-right: 10%;
+  width: 65%;
+  margin-left: 20%;
 }
 button {
   background-color: #ff165d;
@@ -182,17 +182,29 @@ footer a {
   align-content: center;
   width: 100%;
 }
-@media (max-width: 500px) {
+@media (min-width: 500px) {
+  .Steps,
   .box {
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FF9A00;
   }
-  nav a {
+  .middle-content {
     background-color: purple;
+  }
+  .arrow {
+    display: none;
   }
 }
 @media (max-width: 1000px) {
-  header nav a {
-    background-color: #FF9A00;
+  header {
+    background-color: #ff165d;
+  }
+  .Steps .box {
+    background-color: black;
+    display: Flex;
+    justify-content: center;
   }
   .top-content {
     display: flex;
