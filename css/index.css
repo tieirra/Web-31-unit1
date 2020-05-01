@@ -122,25 +122,32 @@ ul li a {
   margin-top: 10%;
   width: 75%;
 }
+.cashpic {
+  margin-left: 25%;
+  width: 100%;
+}
 .top-content h1 {
   margin-left: 30%;
   margin-top: 9px;
   font-size: 35px;
   margin-bottom: 20%;
   font: 'Oswald', sans-serif;
-  color: #F6f7d7;
+  color: #ff165d;
   justify-content: center;
 }
 h2 {
   font-size: 35px;
   color: #ff165d;
 }
+h3 {
+  color: #F6f7d7;
+}
 .Steps {
   margin-top: 10%;
   margin-bottom: 10%;
   display: flex;
   flex-direction: row;
-  justify-items: space-between;
+  justify-items: space-evenly;
   width: 100%;
 }
 .Steps .box {
@@ -240,9 +247,19 @@ footer a {
   .box {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
+    color: #F6f7d7;
+    text-align: center;
+    font-size: 25px;
   }
-  body {
-    align-items: column;
+  .Steps {
+    width: 40%;
+    height: 45;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
   }
 }
 h4 {
